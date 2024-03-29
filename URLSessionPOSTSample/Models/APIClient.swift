@@ -31,10 +31,12 @@ struct APIClient {
                 // メソッドの指定(今回はPOSTメソッドを使用)
                 urlRequest.httpMethod = "POST"
                 
+                // MARK: HTTPHeaderを付与する場合
                 // FIXME: `["key": "value"]`の部分を使用するサービスが求めているものにしましょう
                 // HTTPHeaderに記入する内容はリファレンスに書いてあるはずです
                 urlRequest.allHTTPHeaderFields = ["key": "value"]
                 
+                // MARK: HTTPBodyを付与する場合
                 // HTTPBodyも同様にサービスが求めているものを記入しましょう
                 // このコードではStructをJSONへエンコードし、httpBodyへ記入しています
                 var httpBody: Data? {
